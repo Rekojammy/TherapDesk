@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapDesk - Login</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+    <main class="flex flex-row bg-orange-400 md:items-center relative">
+
+        <img class="h-screen w-full" src="./images/pexels-vanessa-garcia-6325975.jpg" alt="">
+
+        <div class="absolute rounded-xl left-20 w-2/5 h-[600px] bg-white px-5">
+
+
+            <!-- Form  --->
+            <form class="form-group mt-4" id="signupform">
+                <div class="row mt-4">
+
+                    <!-- Logo  --->
+                    <div class="mt-5">
+                        <div class="">
+                            <a href="index.html" class="flex flex-row items-center">
+                                <img width="60"
+                                    src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+                                    alt="Logo">
+                                <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-3">
+                        <h2 class="font-bold text-3xl mb-3">Create Account</h2>
+                        <p>Get started by creating a new account.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <div class="mb-3">
+                        <!-- First Name  --->
+                        <label for="fname" class="mb-3 font-semibold">First Name:</label>
+                        <input type="text" name="firstname" class="w-full border rounded p-3 outline-blue-500" id="firstname"
+                            placeholder="Enter your first name" fields="firstname">
+
+                    </div>
+
+                    <!-- Last Name  --->
+                    <div class="mb-3">
+                        <label for="lname" class="mb-3 font-semibold">Last Name:</label>
+                        <input type="text" name="lastname" class="w-full border rounded p-3 outline-blue-500" id="lastname"
+                            placeholder="Enter your last name" fields="lastname" required>
+
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <!-- Email Address  --->
+                    <div class="">
+                        <label for="email" class="mb-3 font-semibold">Email Address:</label>
+                        <input type="text" name="email" id="email" class="w-full border rounded p-3 outline-blue-500"
+                            placeholder="Enter your email address" fields="email" required>
+
+                    </div>
+
+                    <!-- Phone Number --->
+                    <div class="">
+                        <label for="phonenumber" class="mb-3 font-semibold">Phone Number:</label>
+                        <input type="tel" name="phone" id="phone" class="w-full border rounded p-3 outline-blue-500"
+                            placeholder="Enter your Phone Number" minlength="11" maxlength="11" fields="phone" required>
+
+                    </div>
+                </div>
+
+
+
+                <!-- Password  --->
+                <div class="flex my-3 gap-3">
+                    <div class="">
+                        <label for="pword" class="font-semibold">Password:</label>
+                        <div class="w-60">
+                            <input type="password" name="password" id="password" class="w-full border rounded p-3 outline-blue-500"
+                                minlength="8" placeholder="Enter password" fields="password" required>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password  --->
+                    <div class="">
+                        <label for="confrm" class="font-semibold">Confirm Password:</label>
+                        <div class="w-64">
+                            <input type="password" name="confirmpassword" id="confirmpassword"
+                                class="w-full border rounded p-3 outline-blue-500" placeholder="Confirm password" fields="confirmpassword"
+                                minlength="8" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="I Agree" required>
+                            <label class="form-check-label" for="flexCheckDefault">By clicking on this checkbox, you
+                                agree to our
+                                <a href="#" class="text-blue-600 font-bold">Terms of Service</a> and <span> <a href="#"
+                                        class="text-blue-600 font-bold">Privacy Policy</a></a></a></label> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="signup_btn"
+                    class="w-full bg-blue-700 text-white font-bold rounded py-3 mt-4 hover:bg-blue-500">Create an
+                    account</button>
+
+
+                <div class="row">
+                    <div class="col-12 py-5 text-center text-ms-center">
+                        <p>Already have an account? <a href="login.html"
+                                class="font-bold hover:text-blue-600">Login</a></p>
+                    </div>
+
+                </div>
+            </form>
+
+
+
+        </div>
+
+        </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

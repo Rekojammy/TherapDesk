@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapDesk - Login</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+    <main class="flex flex-row bg-orange-400 md:items-center justify-end relative">
+
+        <img class="h-screen w-full" src="./images/pexels-shvets-production-7516347.jpg" alt="">
+
+        <div class="absolute rounded-xl right-20 w-2/5 h-[600px] bg-gray-200 px-5">
+    
+    
+          <!-- Form  --->
+          <div id="form absolute">
+            <form class="mt-2" id="signin_form">
+    
+              <!-- Logo  --->
+              <div class="mt-5">
+                <div class="">
+                    <a href="index.html" class="flex flex-row items-center">
+                      <img width="60"
+                        src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+                        alt="Logo">
+                      <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+                    </a>
+                  </div>
+              </div>
+    
+              <div class="my-4">
+                <div class="">
+                  <h2 class="font-bold text-3xl mb-3">Login</h2>
+                  <p>Login to your account</p>
+                </div>
+              </div>
+    
+              <!-- Email -->
+              <div class="my-3">
+                <label for="email" class="mb-3 font-semibold">Email Address:</label>
+                <input type="email" name="email" class="w-full border rounded p-3 outline-blue-500" id="email" fields="email"
+                  placeholder="Enter your email address" required>
+                <small id="error1"></small>
+              </div>
+    
+    
+              <!-- Password  --->
+              <div class="my-5">
+                <label for="email" class="mb-3 font-semibold">Password:</label>
+                <input type="password" name="Password" fields="password" minlength="8" class="w-full border rounded p-3 outline-blue-500"
+                  id="password" placeholder="Enter your Password" required>
+                <!-- <i><span class="bi bi-eye-slash eyetoggle" id="togglePassword"></span></i> -->
+                <small id="error2"></small>
+              </div>
+    
+    
+              <!-- Remember Me  --->
+              <div class="flex justify-between my-10">
+                <div class="col-7 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Remember Me">
+                    <label class="form-check-label" for="flexCheckDefault">Remember me next time</label>
+                  </div>
+                </div>
+    
+                <div class="col-5 text-end">
+                  <a href="#" class="text-red-600 my-2" id="forgot">Forgot Password?</a>
+                </div>
+              </div>
+    
+    
+              <!-- Button  --->
+              <button type="button" id="SignIn_btn"
+                class="w-full bg-blue-700 rounded text-white font-semibold hover:bg-blue-500 items-center fs-6 py-3">Login
+                to
+                dashboard</button>
+    
+              <div class="row">
+                <div class="col-12 text-center py-5 mt-2 text-ms-center">
+                  <p>Don't have an account? <a href="signup.html" class="font-bold hover:text-blue-600" id="signup">Sign up</a></p>
+                </div>
+    
+              </div>
+            </form>
+          </div>
+    
+    
+    
+        </div>
+    
+        </div>
+    
+        </div>
+    
+      </main>
+
+</body>
+
+</html>
