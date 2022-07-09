@@ -16,13 +16,13 @@
 
     <main class="flex flex-row bg-orange-400 md:items-center relative">
 
-        <img class="h-screen w-full" src="./images/pexels-vanessa-garcia-6325975.jpg" alt="">
+        <img class="h-screen w-full hidden lg:block" src="./images/pexels-vanessa-garcia-6325975.jpg" alt="">
 
-        <div class="absolute rounded-xl left-20 w-2/5 h-[600px] bg-white px-5">
+        <div class="absolute rounded-xl lg:left-20 lg:w-2/5 lg:h-[600px] bg-white px-5">
 
 
             <!-- Form  --->
-            <form class="form-group mt-4" id="signupform">
+            <form class="lg:mt-4" id="signupform">
                 <div class="row mt-4">
 
                     <!-- Logo  --->
@@ -43,8 +43,8 @@
                     </div>
                 </div>
 
-                <div class="flex gap-3">
-                    <div class="mb-3">
+                <div class="lg:flex gap-3">
+                    <div class="my-3">
                         <!-- First Name  --->
                         <label for="fname" class="mb-3 font-semibold">First Name:</label>
                         <input type="text" name="firstname" class="w-full border rounded p-3 outline-blue-500" id="firstname"
@@ -60,7 +60,7 @@
 
                     </div>
                 </div>
-                <div class="flex gap-3">
+                <div class="lg:flex gap-3">
                     <!-- Email Address  --->
                     <div class="">
                         <label for="email" class="mb-3 font-semibold">Email Address:</label>
@@ -81,19 +81,19 @@
 
 
                 <!-- Password  --->
-                <div class="flex my-3 gap-3">
+                <div class="lg:flex my-3 gap-3">
                     <div class="">
                         <label for="pword" class="font-semibold">Password:</label>
-                        <div class="w-60">
+                        <div class="lg:w-60">
                             <input type="password" name="password" id="password" class="w-full border rounded p-3 outline-blue-500"
                                 minlength="8" placeholder="Enter password" fields="password" required>
                         </div>
                     </div>
 
                     <!-- Confirm Password  --->
-                    <div class="">
+                    <div class="mt-3 lg:mt-0">
                         <label for="confrm" class="font-semibold">Confirm Password:</label>
-                        <div class="w-64">
+                        <div class="lg:w-64">
                             <input type="password" name="confirmpassword" id="confirmpassword"
                                 class="w-full border rounded p-3 outline-blue-500" placeholder="Confirm password" fields="confirmpassword"
                                 minlength="8" required>
@@ -114,7 +114,7 @@
                 </div>
 
                 <button type="button" id="signup_btn"
-                    class="w-full bg-blue-700 text-white font-bold rounded py-3 mt-4 hover:bg-blue-500">Create an
+                    class="w-full bg-slate-900 text-white font-bold rounded py-3 mt-4 hover:bg-slate-500">Create an
                     account</button>
 
 
