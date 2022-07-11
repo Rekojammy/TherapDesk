@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+
+<body>
+    <main class="bg-slate-800 h-screen w-full">
+
+        <div id="connect" class="container h-full flex flex-col items-center justify-center hold">
+            <h2 class="-mt-20 text-white font-bold text-3xl text-center">Get Started with your Chat</h2>
+            <br>
+            <p class="text-slate-400 mb-10">(Your Chat is Encrypted and Confidential)</p>
+            <input id="p2UnameInput"
+                class="mb-10 py-3 px-5 w-4/5 lg:w-1/2 rounded-lg font-semibold text-slate-800 text-xl outline-0"
+                type="text" placeholder="Enter Username">
+            <div class="buttons" id="butt">
+                <!-- <button id="joinCall"
+                    class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mr-2">Send</button> -->
+                <button id="joinCall"
+                    class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 ml-2">Join Call</button>
+            </div>
+        </div>
+
+        <div id="videoCall" class="hidden h-5/6 lg:h-full lg:pb-10 pt-3 w-full lg:flex-col">
+            <div class="relative video h-4/5 m-3 mt-0">
+                <video class="border h-full rounded-xl" id="theirVideo" autoplay></video>
+                <video
+                    class="z-10 border border-yellow-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full"
+                    id="myVideo" autoplay></video>
+                <div id="chatBox"
+                    class="z-50 hidden bg-slate-800 border border-slate-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full">
+                    <pre class="recieve left-0 bg-white w-1/2 h-min p-2 rounded-lg">Hello</pre>
+                    <pre
+                        class="send ml-48 mt-3 right-0 bg-white w-1/2 h-min p-2 rounded-lg">Hi Clara, I have some issues...</pre>
+                    <div id="typing" class="absolute flex justify-evenly bottom-0 py-3 mx-2 w-96">
+                        <input type="text" 
+                            class="bg-transparent text-white border border-white rounded-full w-64 px-3 py-1"
+                            placeholder="Enter Message...">
+                        <button class="border border-white rounded-full px-1 bg-slate-200">
+                            <box-icon type='solid' name='send'></box-icon>
+                        </button>
+                        <button id="closeChat"
+                            class="border border-white rounded-full px-1 bg-red-700 opacity-40 hover:opacity-100">
+                            <box-icon color="#ffffff" name='x-circle'></box-icon>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="infos h-2/6 flex flex-col items-center justify-center justify-between">
+                <div class="">
+                    <p id="time" class="text-white">09:25</p>
+                </div>
+                <h1 class="text-3xl text-white" id="">Clara Connor</h1>
+                <p class="text text-white">Live <span id="">Conselling </span>Session</p>
+                <div class="buttons flex justify-evenly w-full">
+                    <button onclick="muteAudio()" id="muteAudio" class="border border-white rounded-xl p-3">
+                        <box-icon class="text-xl" name='microphone-off' size="" color="#ffffff"></box-icon>
+                    </button>
+                    <button id="stopCall" class="border border-white rounded-xl bg-white p-3">
+                        <box-icon name='phone-off'></box-icon>
+                    </button>
+                    <button onclick="muteVideo()" id="muteVideo" class="border border-white rounded-xl p-3">
+                        <box-icon name='video-off' color="#ffffff"></box-icon>
+                    </button>
+                    <button id="chatBtn" class="border border-white rounded-xl p-3">
+                        <box-icon name='conversation' color="#ffffff"></box-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="peer2.js"></script>
+</body>
+
+</html>
