@@ -22,7 +22,7 @@
 
       <!-- Form  --->
 
-      <form class="lg:mt-4" id="signin_form">
+      <form class="lg:mt-4" id="login_form">
 
         <!-- Logo  --->
         <div class="mt-5">
@@ -42,7 +42,7 @@
             <p>Login to your account</p>
           </div>
         </div>
-
+        <span class="text-red-600 text-lg" id="Gnerr"></span>
         <!-- Email -->
         <div class="my-3">
           <label for="email" class="mb-3 font-semibold">Email Address:</label>
@@ -55,7 +55,7 @@
         <!-- Password  --->
         <div class="my-5">
           <label for="email" class="mb-3 font-semibold">Password:</label>
-          <input type="password" name="Password" fields="password" minlength="8"
+          <input type="password" name="password" fields="password" minlength="8"
             class="w-full border rounded p-3 outline-blue-500" id="password" placeholder="Enter your Password" required>
           <!-- <i><span class="bi bi-eye-slash eyetoggle" id="togglePassword"></span></i> -->
           <small id="error2"></small>
@@ -78,7 +78,7 @@
 
 
         <!-- Button  --->
-        <button type="button" id="SignIn_btn"
+        <button id="SignIn_btn"
           class="w-full bg-slate-900 rounded text-white font-semibold hover:bg-slate-500 items-center fs-6 py-3">Login
           to
           dashboard</button>
@@ -88,16 +88,12 @@
             <p>Don't have an account? <a href="signup.html" class="font-bold hover:text-blue-600" id="signup">Sign
                 up</a></p>
           </div>
-
         </div>
       </form>
-
-
-
     </div>
-
   </main>
 
+  <script src="./JavaScript Files/login-formdata.js"></script>
 </body>
 
 </html>

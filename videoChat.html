@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="/public/output.css" rel="stylesheet"> -->
+    <title>Therapy Desk - Connect with your counsellor</title>
+</head>
+
+<style>
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .chatBox {
+        overflow-y: auto;
+    }
+
+    .chatBox::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chatBox {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+</style>
+
+<body>
+
+
+    <main class="bg-slate-800 h-screen w-full">
+
+        <div id="connect" class="hidden container h-full w-full flex flex-col items-center justify-center hold">
+            <h2 class="-mt-20 text-white font-bold text-3xl text-center">Get Started with your Chat</h2>
+            <br>
+            <p class="text-slate-400 mb-10">(Your Chat is Encrypted and Confidential)</p>
+            <h2 id="conMesg" class="hidden text-white font-bold mb-5 text-2xl text-center">Connected!</h2>
+            <input id="yourId" class="recieve left-0 bg-white w-1/2 p-2 mb-5 rounded-lg"><br>
+            <input id="IdInput"
+                class="mb-10 py-3 px-5 w-4/5 lg:w-1/2 rounded-lg font-semibold text-slate-800 text-xl outline-0"
+                type="text" placeholder="Enter Your Caller's ID">
+            <div class="w-full flex justify-center" id="butt">
+                <button id="connectBtn"
+                    class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mr-2">Connect</button>
+                <button id="StartBtn"
+                    class="hidden border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 ml-2">Start
+                    Call</button>
+            </div>
+        </div>
+
+        <div id="videoCall" class="lg:flex h-5/6 lg:h-full lg:pb-10 pt-3 w-full lg:flex-col">
+            <div class="relative video h-4/5 m-3 mt-0">
+                <video class="border h-full rounded-xl" id="theirVideo" autoplay></video>
+                <video
+                    class="z-10 border border-yellow-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full"
+                    id="myVideo" autoplay></video>
+                <div id="chatBox"
+                    class="chatBox z-50 hidden bg-slate-800 border border-slate-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full">
+                    <div id="chatting1" class="border border-black chatBox h-[365px]">
+
+                    </div>
+                    <div id="typing" class="absolute flex justify-evenly bottom-0 py-3 w-full">
+                        <input id="yourMessage" type="text"
+                            class="bg-transparent text-white border border-white rounded-full w-64 px-3 py-1"
+                            placeholder="Enter Message...">
+                        <button id="send"
+                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
+                            <box-icon type='solid' name='send'></box-icon>
+                        </button>
+                        <button id="closeChat"
+                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-red-700 opacity-40 hover:opacity-100">
+                            <box-icon color="#ffffff" name='x-circle'></box-icon>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="infos h-2/6 flex flex-col items-center justify-center justify-between">
+                <div class="">
+                    <p id="time" class="text-white">09:25</p>
+                </div>
+                <h1 class="text-3xl text-white" id="">Clara Connor</h1>
+                <p class="text text-white">Live <span id="">Conselling </span>Session</p>
+                <div class="buttons flex justify-evenly w-full">
+                    <button id="muteAudio" class="border border-white rounded-xl p-3">
+                        <box-icon class="text-xl" name='microphone-off' size="" color="#ffffff"></box-icon>
+                    </button>
+                    <button id="stopCall" class="border border-white rounded-xl bg-white p-3">
+                        <box-icon name='phone-off'></box-icon>
+                    </button>
+                    <button id="muteVideo" class="border border-white rounded-xl p-3">
+                        <box-icon name='video-off' color="#ffffff"></box-icon>
+                    </button>
+                    <button id="chatBtn" class="border border-white rounded-xl p-3">
+                        <box-icon name='conversation' color="#ffffff"></box-icon>
+                    </button>
+                </div>
+            </div>
+            <div id="chatBoxSm"
+                class="hidden z-50 bg-slate-800 p-3 rounded-xl absolute bottom-0 right-0 h-56 w-full lg:w-96 lg:h-full">
+                <div class=" border border-slate-300 rounded-xl h-full w-full relative">
+                    <div id="chatting2" class="chatBox h-[150px]">
+
+                    </div>
+                    <div id="typing" class="flex absolute justify-evenly bottom-0 py-3 w-full">
+                        <input id="yourMessage2" type="text"
+                            class="bg-transparent text-white border border-white rounded-full w-64 px-3 py-1"
+                            placeholder="Enter Message...">
+                        <button id="send2"
+                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
+                            <box-icon type='solid' name='send'></box-icon>
+                        </button>
+                        <button id="closeChat2"
+                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-red-700 opacity-40 hover:opacity-100">
+                            <box-icon color="#ffffff" name='x-circle'></box-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="bundle.js" charset="utf-8"></script>
+</body>
+
+</html>
