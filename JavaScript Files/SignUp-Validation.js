@@ -153,7 +153,7 @@ password2.addEventListener("keyup", (e) => {
 
 
 accept.addEventListener("change", (e) => {
-    if (accept.checked === true) {
+    if (accept.checked = true) {
         submit.disabled = false;
     } else {
         submit.disabled = true;
