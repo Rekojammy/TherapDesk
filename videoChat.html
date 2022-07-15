@@ -20,9 +20,9 @@
         white-space: -o-pre-wrap;
         word-wrap: break-word;
     }
-
     .chatBox {
         overflow-y: auto;
+        
     }
 
     .chatBox::-webkit-scrollbar {
@@ -52,6 +52,9 @@
                 class="mb-10 py-3 px-5 w-4/5 lg:w-1/2 rounded-lg font-semibold text-slate-800 text-xl outline-0"
                 type="text" placeholder="Enter Your Caller's ID">
             <div class="w-full flex justify-center" id="butt">
+                <!-- <button id="request"
+                class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mr-2">Request ID
+                Name</button> -->
                 <button id="connectBtn"
                     class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mr-2">Connect</button>
                 <button id="StartBtn"
@@ -67,16 +70,15 @@
                     class="z-10 border border-yellow-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full"
                     id="myVideo" autoplay></video>
                 <div id="chatBox"
-                    class="chatBox z-50 hidden bg-slate-800 border border-slate-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full">
-                    <div id="chatting1" class="border border-black chatBox h-[365px]">
+                    class="z-50 hidden bg-slate-800 border border-slate-300 rounded-xl absolute top-0 right-0 h-32 w-32 lg:w-96 lg:h-full">
+                    <div id="chatting1" class="chatBox h-[465px]">
 
                     </div>
-                    <div id="typing" class="absolute flex justify-evenly bottom-0 py-3 w-full">
+                    <div id="typing" class="absolute flex justify-evenly bottom-0 py-3 mx-2 w-96">
                         <input id="yourMessage" type="text"
                             class="bg-transparent text-white border border-white rounded-full w-64 px-3 py-1"
                             placeholder="Enter Message...">
-                        <button id="send"
-                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
+                        <button id="send" class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
                             <box-icon type='solid' name='send'></box-icon>
                         </button>
                         <button id="closeChat"
@@ -130,6 +132,67 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="callEnd" class="hidden container h-full w-full flex flex-col items-center justify-center hold relative">
+
+            <div id="thankModal"
+                class="hidden z-50 h-64 w-80 rounded-xl bg-white modal flex flex-col justify-center items-center absolute top-50"
+                id="modal">
+                <p class="font-extrabold text-center text-3xl"> Thanks For Your FeedBack! </p>
+                <p class="text-4xl">&#128077;</p>
+
+                <button id="x-close"
+                    class="absolute top-5 right-5 font-semibold flex items-center justify-center text-3xl active:text-gray-500 hover:border border-slate-200 rounded w-10">
+                    <p>x</p>
+                </button>
+            </div>
+
+            <h2 class="-mt-20 text-white font-bold text-3xl text-center">Chat Session Ended!</h2>
+            <!-- <p class="text-slate-400 text-lg">(Chat Info)</p> -->
+            <br>
+            <div class="flex mb-10">
+                <label class="text-white text-lg mr-5">Call Duration: </label>
+                <p class="text-white text-lg">09:36</p>
+            </div>
+
+            <div class="flex">
+                <div class="flex flex-col text-center">
+                    <h2 class="font-bold text-white text-lg">Rate Your Chat</h2>
+                    <br>
+                    <div id="feedbacks" class="flex w-96 items-center justify-between">
+                        <button id="excellent"
+                            class="feedbackBtn z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 w-20 flex flex-col items-center text-white hover:border border-blue-600 rounded-lg hover:border-2">
+                            <p>&#128522;</p>
+                            Excellent!
+                        </button>
+                        <button id="good"
+                            class="feedbackBtn z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 w-20 flex flex-col items-center text-white hover:border border-blue-600 rounded-lg hover:border-2">
+                            <p>&#128512;</p>
+                            Good
+                        </button>
+                        <button id="fair"
+                            class="feedbackBtn z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 w-20 flex flex-col items-center text-white hover:border border-blue-600 rounded-lg hover:border-2">
+                            <p>&#127773;</p>
+                            Fair
+                        </button>
+                        <button id="bad"
+                            class="feedbackBtn z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 w-20 flex flex-col items-center text-white hover:border border-blue-600 rounded-lg hover:border-2">
+                            <p>&#128543;</p>
+                            Bad
+                        </button>
+                        <button id="vbad"
+                            class="feedbackBtn z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 w-20 flex flex-col items-center text-white hover:border border-blue-600 rounded-lg hover:border-2">
+                            <p>&#128545;</p>
+                            Very Bad!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <a id="toDash" href="user_dashboard.html"
+                class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mt-10">Continue To
+                Dashboard</a>
         </div>
     </main>
 

@@ -2747,6 +2747,32 @@
     const myVideo = document.getElementById('myVideo');
 
 
+    const toDash = document.getElementById('toDash');
+    const callEnd = document.getElementById('callEnd');
+    const thankModal = document.getElementById('thankModal');
+    const feedbacks = document.getElementById('feedbacks');
+    const feedbackBtn = document.getElementsByClassName('feedbackBtn');
+    const close = document.getElementById('x-close');
+
+    let feedbackHolder
+    for (let i = 0; i < feedbackBtn.length; i++) {
+      feedbackBtn[i].addEventListener('click', () => {
+        feedbackHolder = feedbackBtn[i].id;
+        console.log(feedbackHolder)
+        setTimeout(() => {
+        thankModal.classList.remove('hidden');
+        }, 500);
+        setTimeout(() => {
+        thankModal.classList.add('hidden');
+        }, 5000);
+      })
+    }
+
+
+    close.addEventListener('click', () => {
+      thankModal.classList.add('hidden');
+    });
+
     StartBtn.addEventListener('click', () => {
       connect.classList.add('hidden');
       videoCall.classList.remove('hidden');
@@ -2769,6 +2795,7 @@
       chatBox.classList.add('lg:block');
       myVideo.classList.add('lg:hidden');
     })
+
     closeChat.addEventListener('click', () => {
       chatBox.classList.remove('lg:block');
       myVideo.classList.remove('lg:hidden');
@@ -2785,12 +2812,12 @@
         initiator: location.hash === '#init',
         trickle: false,
         stream: stream
-      })
+      });
 
       peer.on('signal', function (data) {
         console.log("signal")
         yourId.value = JSON.stringify(data)
-      })
+      });
 
       connectBtn.addEventListener('click', function () {
         console.log("connect button clicked")
@@ -2803,7 +2830,8 @@
           IdInput.classList.add('hidden');
           conMesg.classList.remove('hidden');
         }, 2000)
-      })
+      });
+
 
       send.addEventListener('click', () => {
         myMessage = document.createElement('pre');
@@ -2878,6 +2906,23 @@
 
         theirVideo.srcObject = stream
       })
+
+      stopCall.addEventListener('click', () => {
+        peer.destroy()
+        showCallContent()
+      });
+
+      peer.on('close', function () {
+        showCallContent();
+      })
+
+      const showCallContent = () => {
+        setTimeout(() => {
+        videoCall.classList.add('hidden');
+        videoCall.style.display = 'none';
+        callEnd.classList.remove('hidden');
+        }, 2000)
+      }
 
     })
 
