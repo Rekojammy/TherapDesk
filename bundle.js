@@ -2800,6 +2800,7 @@
       chatBox.classList.remove('lg:block');
       myVideo.classList.remove('lg:hidden');
     })
+    
     closeChat2.addEventListener('click', () => {
       chatBoxSm.classList.add('hidden');
     })
@@ -2895,10 +2896,25 @@
         messages.classList.add('lg:mt-3')
         messages.classList.add('p-2')
         messages.classList.add('rounded-lg')
-        chatting1.appendChild(messages);
-        chatting2.appendChild(messages)
-
         messages.innerText = data
+        chatting1.appendChild(messages);
+
+      })
+
+      peer.on('data', function (data) {
+        console.log("data")
+        messages = document.createElement('pre')
+        messages.classList.add('bg-blue-900')
+        messages.classList.add('text-white')
+        messages.classList.add('h-min')
+        messages.classList.add('w-1/2')
+        messages.classList.add('mt-2')
+        messages.classList.add('lg:mt-3')
+        messages.classList.add('p-2')
+        messages.classList.add('rounded-lg')
+        messages.innerText = data
+        chatting2.appendChild(messages);
+
       })
 
       peer.on('stream', function (stream) {
