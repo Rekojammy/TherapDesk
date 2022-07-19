@@ -63,17 +63,17 @@
 
                 <span class="text-red-600 text-md" id="Gnerr"></span>
                 <div class="lg:flex gap-3 mt-1">
-                    <div class="mb-3">
+                    <div class="lg:w-1/2">
                         <!-- First Name  --->
                         <label for="fname" class="mb-3 font-semibold">First Name: <span
                                 class="text-red-500 text-lg">*</span></label>
                         <input type="text" name="firstname" class="input w-full border rounded p-3 outline-blue-500"
-                            id="firstname" placeholder="Enter your first name" fields="firstname">
+                            id="firstname" placeholder="Enter your first name" fields="firstname" required>
                         <span class="err text-red-600 text-sm"></span>
                     </div>
 
                     <!-- Last Name  --->
-                    <div class="mb-3">
+                    <div class="lg:w-1/2">
                         <label for="lname" class="mb-3 font-semibold">Last Name: <span
                                 class="text-red-500 text-lg">*</span></label>
                         <input type="text" name="lastname" class="input w-full border rounded p-3 outline-blue-500"
@@ -81,10 +81,10 @@
                         <span class="err text-red-600 text-sm"></span>
                     </div>
                 </div>
-                <div class="lg:flex gap-3">
+                <div class="lg:flex my-3 gap-3">
                     <!-- Email Address  --->
-                    <div class="border w-1/3">
-                        <label for="email" class="mb-3 font-semibold">Email Address: <span
+                    <div class="lg:w-1/2">
+                        <label for="email" class="font-semibold">Email Address: <span
                                 class="text-red-500 text-lg">*</span></label>
                         <input type="text" name="email" id="email" class="input w-full border rounded p-3 outline-blue-500"
                             placeholder="Enter your email address" fields="email" required>
@@ -92,7 +92,7 @@
                     </div>
 
                     <!-- Phone Number --->
-                    <div class="">
+                    <div class="lg:w-1/2">
                         <label for="phonenumber" class="mb-3 font-semibold">Phone Number: <span
                                 class="text-red-500 text-lg">*</span></label>
                         <input type="tel" name="phone" id="phone" class="input w-full border rounded p-3 outline-blue-500"
@@ -104,30 +104,26 @@
 
 
                 <!-- Password  --->
-                <div class="lg:flex my-3 gap-3">
-                    <div class="">
+                <div class="lg:flex gap-3 mb-3">
+                    <div class="lg:w-1/2">
                         <label for="pword" class="font-semibold">Password: <span
                                 class="text-red-500 text-lg">*</span></label>
-                        <div class="lg:w-60">
                             <input type="password" name="password" id="password"
                                 class="input w-full border rounded p-3 outline-blue-500" minlength="8"
                                 placeholder="Enter password" fields="password" required>
                             <span class="err text-red-600 text-sm" id="p1err1"></span>
                                     <span class="text-red-600 text-sm" id="p1err2"></span>
-                        </div>
                     </div>
 
                     <!-- Confirm Password  --->
-                    <div class="mt-3 lg:mt-0">
+                    <div class="lg:w-1/2">
                         <label for="confrm" class="font-semibold">Confirm Password: <span
                                 class="text-red-500 text-lg">*</span></label>
-                        <div class="lg:w-64">
                             <input type="password" name="confirmpassword" id="confirmpassword"
                                 class="input w-full border rounded p-3 outline-blue-500" placeholder="Confirm password"
                                 fields="confirmpassword" minlength="8" required>
                                 <span class="err text-red-600 text-sm" id="p2err1"></span>
                                 <span class="text-red-600 text-sm" id="p2err2"></span>
-                        </div>
                     </div>
                 </div>
 
@@ -142,7 +138,7 @@
                     </div>
                 </div>
 
-                <button disabled id="signup_btn"
+                <button id="signup_btn"
                     class="w-full bg-slate-800 text-white font-bold rounded py-3 mt-4 hover:bg-slate-700">Create an
                     account</button>
 
@@ -158,8 +154,8 @@
         </div>
     </main>
 
+
     <script src="./JavaScript Files/SignUp-Validation.js"></script>
     <script src="./JavaScript Files/signup-formdata.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="/public/output.css" rel="stylesheet"> -->
+    <title>Therapy Desk - Dashboard</title>
+</head>
+
+<body>
+
+    <main class="bg-slate-800 h-full w-full p-5 pb-24">
+        <div class="flex justify-center">
+            <h1 class="text-white font-semibold text-4xl text-center">Schedules</h1>
+        </div>
+
+        <section class="border-b-2 pb-5 ">
+            <div class="flex flex-col border justify-center mt-5">
+                <p class="text-white border border-black w-4/5">
+                    <span class="bg-slate-600 px-4 py-2 rounded-xl">2</span>
+                    :
+                    <span class="bg-slate-600 px-4 py-2 rounded-xl">33</span>
+                    :
+                    <span class="bg-slate-600 px-4 py-2 rounded-xl">15</span>
+                    :
+                    <span class="bg-slate-600 px-4 py-2 rounded-xl">06</span>
+                </p>
+                <p class="text-white border border-red-700 w-4/5">
+                    <span class="">Days</span>
+                    <span class="">Hours</span>
+                    <span class="">Mins</span>
+                    <span class="">Secs</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="mt-10 flex justify-center">
+            <div class="flex relative w-full">
+                <input type="text" id="search"
+                    class="rounded-full w-full px-4 pl-12 py-3 outline-none text-white text-2xl"
+                    placeholder="Search By Name" style="background-color: rgba(255, 255, 255, 0.2);">
+                <label for="search"
+                    class="w-10 h-10 absolute left-1 p-0 top-3 flex justify-center text-center align-middle">
+                    <box-icon class="w-full ml-2 mt-2" name='search' size="lg" color=""></box-icon>
+                </label>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div class="flex flex-row w-full gap-5">
+                <div class="w-1/2 h-44 p-5 rounded-xl flex flex-col justify-center items-start bg-blue-50">
+                    <h2 class="font-bold text-slate-800 text-4xl">56%</h2>
+                    <p class="text-slate-700 font-medium">Success</p>
+                    <div class="w-full -mb-5 flex justify-center">
+                        <img class="" width="110"
+                            src="./images/red-growth-graph-transparent-png-835640-removebg-preview.png" alt="Graph">
+                    </div>
+                </div>
+
+                <div
+                    class="p-5 w-1/2 h-44 rounded-xl flex flex-col justify-center items-left bg-slate-600 justify-between">
+                    <div>
+                        <h2 class="font-bold text-white text-4xl">24</h2>
+                        <P class="text-slate-300 font-medium">Clients</P>
+                    </div>
+                    <div class="flex mt-3 h-full relative justify-center items-end">
+                        <img class="rounded-full absolute left-0 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="40" src="./Avatars/avatar1.png" alt="Image">
+                        <img class="rounded-full absolute left-6 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="40" src="./Avatars/avatar114.png" alt="Image">
+                        <img class="rounded-full absolute left-12 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="40" src="./Avatars/avatar12.png" alt="Image">
+                        <img class="rounded-full absolute left-20 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="40" src="./Avatars/avatar13.png" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="border rounded-xl w-full mt-5 p-5">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-white text-2xl">Family Therapy</h2>
+                    <p class="text-slate-300 font-medium">Tomorrow</p>
+                </div>
+
+                <h2 class="font-bold text-white text-lg mt-5">Johnson Family</h2>
+                <p class="text-slate-300 font-medium">4:30pm to 6:00pm . 1h 30min</p>
+
+                <div class="flex justify-between items-center">
+                    <div class="flex mt-3 h-16 relative justify-center items-center">
+                        <img class="rounded-full" src="./Avatars/avatar1.png" width="40" alt="Image">
+                        <img class="w-16 rounded-full absolute left-0 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="400" src="./Avatars/avatar1.png" alt="Image">
+                        <img class="rounded-full absolute left-6 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="400" src="./Avatars/avatar114.png" alt="Image">
+                        <img class="rounded-full absolute left-12 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                            width="40" src="./Avatars/avatar12.png" alt="Image">
+                    </div>
+
+                    <div class="rounded-full bg-pink-300 text-red-700 font-bold h-10 flex justify-center items-center px-4">Group Therapy</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="fixed bottom-0 z-50 w-full bg-slate-800 border-t-2 py-5">
+        <div class="flex justify-between px-3 justify-center items-center">
+            <button id="menu" class="z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='menu' size="md" class="" color="white"></box-icon>
+              </button>
+            <button id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='calendar' size="md" class="" color="white"></box-icon>
+              </button>
+            <button id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='plus-circle' size="md" class="" color="white"></box-icon>
+              </button>
+            <button id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='group' size="md" class="" color="white"></box-icon>
+              </button>
+            <button id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='bell' size="md" class="" color="white"></box-icon>
+              </button>
+        </div>
+    </footer>
+
+</body>
+
+</html>

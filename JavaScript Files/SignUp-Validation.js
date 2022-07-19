@@ -192,18 +192,18 @@ function validate() {
 
     }
 
-    for (let i = 0; i < select.length; i++) {
-        let item = select[i];
-        for (let j = 0; j < errval.length; j++) {
-            let elem = errval[j]
+    // for (let i = 0; i < select.length; i++) {
+    //     let item = select[i];
+    //     for (let j = 0; j < errval.length; j++) {
+    //         let elem = errval[j]
 
-            if (item.value === "" && i == j) {
-                elem.innerHTML = "Please fill this field"
-            } else if (!item.value == "" && i == j) {
-                elem.innerHTML = ""
-            }
-        }
-    }
+    //         if (item.value === "" && i == j) {
+    //             elem.innerHTML = "Please fill this field"
+    //         } else if (!item.value == "" && i == j) {
+    //             elem.innerHTML = ""
+    //         }
+    //     }
+    // }
 
     if (p1err1.innerHTML.length > 0) {
         document.body.style.backgroundColor = 'red'

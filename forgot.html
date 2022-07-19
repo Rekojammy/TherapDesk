@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapDesk - Forgot Password</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+    <main
+        class="flex h-screen w-full items-center relative bg-[url('./images/pexels-karolina-grabowska-4491461.jpg')] bg-cover">
+
+        <div class="box-border absolute rounded-xl lg:left-20 w-full h-full lg:w-2/5 lg:h-[600px] bg-white px-5">
+
+            <!-- Form  --->
+            <form class="" id="forgot_form">
+
+                <!-- Logo  --->
+                <div class="mt-7">
+                    <div class="">
+                        <a href="index.html" class="flex flex-row items-center">
+                            <img width="60"
+                                src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+                                alt="Logo">
+                            <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="my-10">
+                    <!-- Reset Password -->
+                    <div class="">
+                        <h2 class="font-bold text-3xl mb-3">Reset Password</h2>
+                        <p>Reset your password and regain access</p>
+                    </div>
+                </div>
+                <span class="text-red-600 text-lg" id="Gnerr"></span>
+
+
+                <div class="row">
+
+
+
+                    <!-- Password --->
+
+                    <!-- Confirm Email Password  --->
+                    <div class="my-2">
+                        <label for="email" class="mb-5 font-semibold">Enter the email address you signed up
+                            with</label>
+                        <input type="email" name="email" class="w-full border rounded p-3 outline-blue-500 my-5" id="email"
+                            fields="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button id="SignIn_btn"
+                        class="w-full bg-slate-800 rounded text-white font-semibold hover:bg-slate-500 items-center fs-6 py-3">Send
+                        Reset Code</button>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center text-md-center mt-3 mb-5">
+                        <p>Remember password? <a href="login.html" class="font-bold hover:text-blue-600">Login</a>
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
