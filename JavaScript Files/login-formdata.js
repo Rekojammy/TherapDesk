@@ -22,9 +22,20 @@ form.addEventListener('submit', (e) => {
     );
         if (!exist) {
             Gnerr.innerHTML = 'Wrong Username or Password!'
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Incorrect Details!',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
         } else {
             Gnerr.style.color = "green";
             Gnerr.innerHTML = 'Login Successful!';
+            Swal.fire(
+                'Login Successful!',
+                'Go ahead to login',
+                'success'
+              )
             form.submit();
             location.href = "therapist_dashboard.html";
         }
