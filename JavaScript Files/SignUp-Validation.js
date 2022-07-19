@@ -11,6 +11,7 @@ function ___(queryAll) {
 const form = __("form");
 const inputs = ___(".input");
 const err = ___(".err");
+const err2 = ___(".err2");
 const firstname = _("firstname");
 const lastname = _("lastname");
 const email = _("email");
@@ -24,23 +25,76 @@ const p1err2 = _("p1err2");
 const p2err1 = _("p2err1");
 const p2err2 = _("p2err2");
 
-
 const phonerr = _("phonerr");
 const mailerr = _("mailerr");
 
 const accept = _("accept");
+const user = []
 
 
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     validate();
-});
+        if (p1err1.innerHTML.length > 0 || p2err1.innerHTML.length > 0 || phonerr.innerHTML.length > 0 || mailerr.innerHTML.length > 0) {
+            console.log('block')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something Went Wrong!',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
+            return;
+        } else {
+            console.log("success")
+            Swal.fire(
+                'SignUp Success!',
+                'Go ahead to login',
+                'success'
+              )
+            let exist = user.length && JSON.parse(localStorage.getItem('user')).some(data =>
+                data.email.toLowerCase() == email.value.toLowerCase() //&&
+                // data.password.toLowerCase() == password.value.toLowerCase()
+            );
+            if (!exist) {
+                addUser(
+                    firstname.value,
+                    lastname.value,
+                    email.value,
+                    phone.value,
+                    password.value
+                )
+                Gnerr.innerHTML = "";
+                return;
+                // firstName.value = ""
+                // lastName.value = ""
+                // phoneNo.value = ""
+                // Email.value = ""
+                // passWord.value = ""
+            } else {
+                Gnerr.innerText = "Duplicate Account Found. Sign Up with Another Account"
+            }
+        }
+    
+    });
 
 // submit.addEventListener('click', () => {
 //     console.log('clicked')
 //     form.style.backgroundColor = 'red'
 // })
+
+const addUser = (firstName, lastName, Email, phoneNo, passWord) => {
+    user.push({
+        first_name: firstName,
+        last_name: lastName,
+        email: Email,
+        phone: phoneNo,
+        password: passWord
+    })
+    localStorage.setItem("user", JSON.stringify(user))
+
+    return { firstName, lastName, Email, phoneNo, passWord }
+}
 
 phone.addEventListener("keypress", (e) => {
     if (e.keyCode < 48 || e.keyCode > 57) {
@@ -63,7 +117,7 @@ phone.addEventListener("keypress", (e) => {
 
 email.addEventListener("keyup", (e) => {
     if (!email.value.includes("@") || !email.value.includes(".com")) {
-        mailerr.innerHTML = "Please enter a valid email e.g. " + `<i>you@mail.com`;
+        mailerr.innerHTML = "Please enter a valid email e.g. " + `<i>you@mail.com</i>`;
     } else {
         mailerr.innerHTML = "";
     }
@@ -164,7 +218,7 @@ accept.addEventListener("change", (e) => {
 function validate() {
     for (let i = 0; i < inputs.length; i++) {
         let item = inputs[i];
-        if (item.value === "") {
+        if (item.value == "") {
             Gnerr.innerHTML = "Please fill all Required fields *";
         }
         else {
@@ -211,6 +265,6 @@ function validate() {
         document.body.style.backgroundColor = 'green';
     }
 
-    
+
 
 }

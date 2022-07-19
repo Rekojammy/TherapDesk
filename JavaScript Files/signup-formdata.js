@@ -48,11 +48,11 @@ signupform.addEventListener('submit', (e) => {
                 phoneNo.value,
                 passWord.value
             )
-            firstName.value = ""
-            lastName.value = ""
-            phoneNo.value = ""
-            Email.value = ""
-            passWord.value = ""
+            // firstName.value = ""
+            // lastName.value = ""
+            // phoneNo.value = ""
+            // Email.value = ""
+            // passWord.value = ""
         } else {
             gnerr.innerText = "Duplicate Account Found. Sign Up with Another Account"
         }

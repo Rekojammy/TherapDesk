@@ -25,9 +25,8 @@ form.addEventListener('submit', (e) => {
         } else {
             Gnerr.style.color = "green";
             Gnerr.innerHTML = 'Login Successful!';
-            // form.method = "POST";
-            // form.action = "landing.html";
-            // form.submit();
+            form.submit();
+            location.href = "therapist_dashboard.html";
         }
     
 })

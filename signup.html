@@ -10,6 +10,7 @@
     <link href="/dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <style>
@@ -61,7 +62,7 @@
                     <p>Get started by creating a new account.</p>
                 </div>
 
-                <span class="text-red-600 text-md" id="Gnerr"></span>
+                <span class="err text-red-600 text-md" id="Gnerr"></span>
                 <div class="lg:flex gap-3 mt-1">
                     <div class="lg:w-1/2">
                         <!-- First Name  --->
@@ -112,7 +113,7 @@
                                 class="input w-full border rounded p-3 outline-blue-500" minlength="8"
                                 placeholder="Enter password" fields="password" required>
                             <span class="err text-red-600 text-sm" id="p1err1"></span>
-                                    <span class="text-red-600 text-sm" id="p1err2"></span>
+                                    <span class="err2 text-red-600 text-sm" id="p1err2"></span>
                     </div>
 
                     <!-- Confirm Password  --->
@@ -123,7 +124,7 @@
                                 class="input w-full border rounded p-3 outline-blue-500" placeholder="Confirm password"
                                 fields="confirmpassword" minlength="8" required>
                                 <span class="err text-red-600 text-sm" id="p2err1"></span>
-                                <span class="text-red-600 text-sm" id="p2err2"></span>
+                                <span class="err2 text-red-600 text-sm" id="p2err2"></span>
                     </div>
                 </div>
 
@@ -156,6 +157,6 @@
 
 
     <script src="./JavaScript Files/SignUp-Validation.js"></script>
-    <script src="./JavaScript Files/signup-formdata.js"></script>
+    <!-- <script src="./JavaScript Files/signup-formdata.js"></script> -->
 </body>
 </html>
