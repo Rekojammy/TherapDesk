@@ -2731,6 +2731,7 @@
     const closeChat2 = document.getElementById('closeChat2');
     const send = document.getElementById('send');
     const send2 = document.getElementById('send2');
+    // const myMessage = document.getElementById('myMessage');
 
     const connect = document.getElementById('connect');
 
@@ -2745,6 +2746,7 @@
     const videoCall = document.getElementById('videoCall');
     const theirVideo = document.getElementById('theirVideo');
     const myVideo = document.getElementById('myVideo');
+    
 
 
     const toDash = document.getElementById('toDash');
@@ -2795,15 +2797,14 @@
       chatBox.classList.add('lg:block');
       myVideo.classList.add('lg:hidden');
     })
-
     closeChat.addEventListener('click', () => {
       chatBox.classList.remove('lg:block');
       myVideo.classList.remove('lg:hidden');
     })
-    
     closeChat2.addEventListener('click', () => {
       chatBoxSm.classList.add('hidden');
     })
+
 
     getUserMedia({ video: true, audio: false }, function (err, stream) {
       if (err) return console.error(err)
@@ -2833,50 +2834,43 @@
         }, 2000)
       });
 
-
       send.addEventListener('click', () => {
-        myMessage = document.createElement('pre');
-        myMessage.classList.add('ml-40')
-        myMessage.classList.add('lg:ml-48')
-        myMessage.classList.add('mt-2')
-        myMessage.classList.add('lg:mt-3')
-        myMessage.classList.add('bg-green-900')
-        myMessage.classList.add('text-white')
-        myMessage.classList.add('w-1/2')
-        myMessage.classList.add('h-min')
-        myMessage.classList.add('p-2')
-        myMessage.classList.add('rounded-lg')
-        myMessage.innerHTML = chatInput.value
-        chatting2.appendChild(myMessage);
-        chatting1.appendChild(myMessage);
-        console.log("send button clicked");
+        myMessage1 = document.createElement('pre');
+        myMessage1.classList.add('ml-48', 'mt-3', 'bg-green-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
+        myMessage1.innerText = chatInput.value;
+        chatting1.appendChild(myMessage1)
+        console.log('myMessage1 sent')
+
+
+        myMessage2 = document.createElement('pre');
+        myMessage2.classList.add('ml-48', 'mt-3', 'bg-green-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
+        myMessage2.innerText = chatInput.value;
+        chatting2.appendChild(myMessage2)
+        console.log('myMessage2 sent')
 
         
+        console.log("send button")
 
         var yourMessage = chatInput.value
         peer.send(yourMessage)
 
-
         chatInput.value = ""
-      })
+      });
+
 
       send2.addEventListener('click', () => {
         myMessage = document.createElement('pre');
-        myMessage.classList.add('ml-40')
-        myMessage.classList.add('lg:ml-48')
-        myMessage.classList.add('mt-2')
-        myMessage.classList.add('lg:mt-3')
-        myMessage.classList.add('bg-green-900')
-        myMessage.classList.add('text-white')
-        myMessage.classList.add('w-1/2')
-        myMessage.classList.add('h-min')
-        myMessage.classList.add('p-2')
-        myMessage.classList.add('rounded-lg')
+        myMessage.classList.add('ml-44', 'mt-3', 'bg-green-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
         myMessage.innerText = chatInput2.value
-        chatting1.appendChild(myMessage);
-        chatting2.appendChild(myMessage);
-        console.log("send button");
+        chatting1.appendChild(myMessage)
+        console.log("send button")
 
+
+        myMessage2 = document.createElement('pre');
+        myMessage2.classList.add('ml-44', 'mt-3', 'bg-green-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
+        myMessage2.innerText = chatInput2.value;
+        chatting2.appendChild(myMessage2)
+        console.log('myMessage2 sent')
 
         var yourMessage2 = chatInput2.value
         peer.send(yourMessage2)
@@ -2887,33 +2881,16 @@
 
       peer.on('data', function (data) {
         console.log("data")
-        messages = document.createElement('pre')
-        messages.classList.add('bg-blue-900')
-        messages.classList.add('text-white')
-        messages.classList.add('h-min')
-        messages.classList.add('w-1/2')
-        messages.classList.add('mt-2')
-        messages.classList.add('lg:mt-3')
-        messages.classList.add('p-2')
-        messages.classList.add('rounded-lg')
-        messages.innerText = data
-        chatting1.appendChild(messages);
+        messages1 = document.createElement('pre')
+        messages1.classList.add('mt-3', 'bg-blue-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
+        messages1.innerText = data
+        chatting1.appendChild(messages1);
 
-      })
 
-      peer.on('data', function (data) {
-        console.log("data")
-        messages = document.createElement('pre')
-        messages.classList.add('bg-blue-900')
-        messages.classList.add('text-white')
-        messages.classList.add('h-min')
-        messages.classList.add('w-1/2')
-        messages.classList.add('mt-2')
-        messages.classList.add('lg:mt-3')
-        messages.classList.add('p-2')
-        messages.classList.add('rounded-lg')
-        messages.innerText = data
-        chatting2.appendChild(messages);
+        messages2 = document.createElement('pre')
+        messages2.classList.add('mt-3', 'bg-blue-900', 'text-white', 'w-1/2', 'h-min', 'p-2', 'rounded-lg')
+        messages2.innerText = data
+        chatting2.appendChild(messages2);
 
       })
 

@@ -20,9 +20,10 @@
         white-space: -o-pre-wrap;
         word-wrap: break-word;
     }
+
     .chatBox {
         overflow-y: auto;
-        
+
     }
 
     .chatBox::-webkit-scrollbar {
@@ -41,6 +42,7 @@
 
 
     <main class="bg-slate-800 h-screen w-full">
+        <a href="therapist_dashboard.html" class="border w-16 h-16 absolute left-3 top-3 rounded-full"><box-icon type='solid' name='left-arrow-circle' color="white" border="circle" animation="fade-right"></box-icon></a>
 
         <div id="connect" class="container h-full w-full flex flex-col items-center justify-center hold">
             <h2 class="-mt-20 text-white font-bold text-3xl text-center">Get Started with your Chat</h2>
@@ -63,7 +65,7 @@
             </div>
         </div>
 
-        <div id="videoCall" class="hidden lg:flex h-5/6 lg:h-full lg:pb-10 pt-3 w-full lg:flex-col">
+        <div id="videoCall" class="hidden h-5/6 lg:h-full lg:pb-10 pt-3 w-full lg:flex-col">
             <div class="relative video h-4/5 m-3 mt-0">
                 <video class="border h-full rounded-xl" id="theirVideo" autoplay></video>
                 <video
@@ -78,7 +80,8 @@
                         <input id="yourMessage" type="text"
                             class="bg-transparent text-white border border-white rounded-full w-64 px-3 py-1"
                             placeholder="Enter Message...">
-                        <button id="send" class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
+                        <button id="send"
+                            class="border border-white flex justify-center items-center text-center rounded-full px-1 bg-slate-200">
                             <box-icon type='solid' name='send'></box-icon>
                         </button>
                         <button id="closeChat"
@@ -134,7 +137,8 @@
             </div>
         </div>
 
-        <div id="callEnd" class="hidden container h-full w-full flex flex-col items-center justify-center hold relative">
+        <div id="callEnd"
+            class="hidden container h-full w-full flex flex-col items-center justify-center hold relative">
 
             <div id="thankModal"
                 class="hidden z-50 h-64 w-80 rounded-xl bg-white modal flex flex-col justify-center items-center absolute top-50"
@@ -149,7 +153,6 @@
             </div>
 
             <h2 class="-mt-20 text-white font-bold text-3xl text-center">Chat Session Ended!</h2>
-            <!-- <p class="text-slate-400 text-lg">(Chat Info)</p> -->
             <br>
             <div class="flex mb-10">
                 <label class="text-white text-lg mr-5">Call Duration: </label>
@@ -190,13 +193,13 @@
                 </div>
             </div>
 
-            <a id="toDash" href="user_dashboard.html"
+            <a id="toDash" href="therapist_dashboard.html"
                 class="border border-white rounded-lg bg-white text-slate-800 font-bold px-5 py-2 mt-10">Continue To
                 Dashboard</a>
         </div>
+
     </main>
 
     <script src="bundle.js" charset="utf-8"></script>
 </body>
-
 </html>

@@ -101,25 +101,37 @@
     </main>
 
     <footer class="fixed bottom-0 z-50 w-full bg-slate-800 border-t-2 py-5">
+        <div id="menu" class="absolute bottom-16 hidden bg-white p-4 w-1/2 rounded-lg h-64">
+            <ul class="h-full flex flex-col font-semibold text-lg justify-between ">
+                <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="index.html">Home Page</a></li>
+                <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="videoChat.html">Start Call</a></li>
+                <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Profile</a></li>
+                <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Settings</a></li>
+                <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Log Out</a></li>
+            </ul>
+        </div>
         <div class="flex justify-between px-3 justify-center items-center">
-            <a href="#" id="menu" class="z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
+            <button onclick="menuDisplay()" id="menuBtn" class="z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
                 <box-icon name='menu' size="" class="" color="white"></box-icon>
-              </a>
-            <a href="./therapist_schedules.html" id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+            </button>
+            <button onclick="menuClose()" id="closeMenuBtn" class="hidden z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
+                <box-icon name='x' size="" class="" color="white"></box-icon>
+            </button>
+            <a href="./therapist_schedules.html" id="scheduleBtn" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
                 <box-icon name='calendar' size="" class="" color="white"></box-icon>
               </a>
-            <a href="./therapist_dashboard.html" id="menu" class=" z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+            <a href="./therapist_dashboard.html" id="sessionsBtn" class=" z-50 flex justify-center text-center top-3 left-3 border-white rounded">
                 <box-icon name='edit' size="" class="" color="white" type=""></box-icon>
               </a>
-            <a href="#" id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+            <a href="#" id="subscribersBtn" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
                 <box-icon name='group' size="" class="" color="white"></box-icon>
               </a>
-            <a href="#" id="menu" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+            <a href="#" id="notifBtn" class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
                 <box-icon name='bell' size="" class="" color="white"></box-icon>
               </a>
         </div>
     </footer>
 
+    <script src="./JavaScript Files/therapmenu.js"></script>
 </body>
-
 </html>
