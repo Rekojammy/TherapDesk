@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapDesk - Sign Up</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<style>
+    .mDiv {
+        overflow-x: hidden;
+        white-space: wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+    .mDiv::-webkit-scrollbar {
+        display: none;
+    }
+    .mDiv{
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+</style>
+
+<body>
+
+    <main
+        class="flex h-screen w-full items-center relative bg-[url('./images/pexels-vanessa-garcia-6325975.jpg')] bg-cover">
+
+        <div class="mDiv box-border absolute rounded-xl lg:left-20 w-full h-full lg:w-2/5 lg:h-[600px] bg-white px-5">
+
+
+            <!-- Form  --->
+            <form class="lg:mt-4" id="signupform">
+
+
+                <!-- Logo  --->
+                <div class="mt-5">
+                    <div class="">
+                        <a href="index.html" class="flex flex-row items-center">
+                            <img width="60"
+                                src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+                                alt="Logo">
+                            <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-3">
+                    <h2 class="font-bold text-3xl mb-2">Create Account</h2>
+                    <p>Get started by creating a new account.</p>
+                </div>
+
+                <span class="err text-red-600 text-md" id="Gnerr"></span>
+                <div class="lg:flex gap-3 mt-1">
+                    <div class="lg:w-1/2">
+                        <!-- First Name  --->
+                        <label for="fname" class="mb-3 font-semibold">First Name: <span
+                                class="text-red-500 text-lg">*</span></label>
+                        <input type="text" name="firstname" class="input w-full border rounded p-3 outline-blue-500"
+                            id="firstname" placeholder="Enter your first name" fields="firstname" required>
+                        <span class="err text-red-600 text-sm"></span>
+                    </div>
+
+                    <!-- Last Name  --->
+                    <div class="lg:w-1/2">
+                        <label for="lname" class="mb-3 font-semibold">Last Name: <span
+                                class="text-red-500 text-lg">*</span></label>
+                        <input type="text" name="lastname" class="input w-full border rounded p-3 outline-blue-500"
+                            id="lastname" placeholder="Enter your last name" fields="lastname" required>
+                        <span class="err text-red-600 text-sm"></span>
+                    </div>
+                </div>
+                <div class="lg:flex my-3 gap-3">
+                    <!-- Email Address  --->
+                    <div class="lg:w-1/2">
+                        <label for="email" class="font-semibold">Email Address: <span
+                                class="text-red-500 text-lg">*</span></label>
+                        <input type="text" name="email" id="email" class="input w-full border rounded p-3 outline-blue-500"
+                            placeholder="Enter your email address" fields="email" required>
+                        <span class="err text-red-600 text-sm" id="mailerr"></span>
+                    </div>
+
+                    <!-- Phone Number --->
+                    <div class="lg:w-1/2">
+                        <label for="phonenumber" class="mb-3 font-semibold">Phone Number: <span
+                                class="text-red-500 text-lg">*</span></label>
+                        <input type="tel" name="phone" id="phone" class="input w-full border rounded p-3 outline-blue-500"
+                            placeholder="Enter your Phone Number" minlength="11" maxlength="11" fields="phone" required>
+                        <span class="err text-red-600 text-sm" id="phonerr"></span>
+                    </div>
+                </div>
+
+
+
+                <!-- Password  --->
+                <div class="lg:flex gap-3 mb-3">
+                    <div class="lg:w-1/2">
+                        <label for="pword" class="font-semibold">Password: <span
+                                class="text-red-500 text-lg">*</span></label>
+                            <input type="password" name="password" id="password"
+                                class="input w-full border rounded p-3 outline-blue-500" minlength="8"
+                                placeholder="Enter password" fields="password" required>
+                            <span class="err text-red-600 text-sm" id="p1err1"></span>
+                                    <span class="err2 text-red-600 text-sm" id="p1err2"></span>
+                    </div>
+
+                    <!-- Confirm Password  --->
+                    <div class="lg:w-1/2">
+                        <label for="confrm" class="font-semibold">Confirm Password: <span
+                                class="text-red-500 text-lg">*</span></label>
+                            <input type="password" name="confirmpassword" id="confirmpassword"
+                                class="input w-full border rounded p-3 outline-blue-500" placeholder="Confirm password"
+                                fields="confirmpassword" minlength="8" required>
+                                <span class="err text-red-600 text-sm" id="p2err1"></span>
+                                <span class="err2 text-red-600 text-sm" id="p2err2"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="I Agree" id="accept" required>
+                            <label class="form-check-label" for="flexCheckDefault">By clicking on this checkbox, you agree to our
+                                <a href="#" class="text-blue-600 font-bold">Terms of Service</a> and <span> <a href="#"
+                                        class="text-blue-600 font-bold">Privacy Policy</a></label> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="signup_btn"
+                    class="w-full bg-slate-800 text-white font-bold rounded py-3 mt-4 hover:bg-slate-700">Create an
+                    account</button>
+
+
+                <div class="row">
+                    <div class="col-12 py-5 text-center text-ms-center">
+                        <p>Already have an account? <a href="login.html" class="font-bold hover:text-blue-600">Login</a>
+                        </p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <script src="./JavaScript Files/SignUp-Validation.js"></script>
+    <!-- <script src="./JavaScript Files/signup-formdata.js"></script> -->
+</body>
+</html>

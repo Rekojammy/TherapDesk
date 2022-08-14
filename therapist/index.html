@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therap Desk - Connect with your online counsellor</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+  <!-- <header class="sticky"> -->
+  <nav id="smNav" class="hidden -z-10 fixed flex flex-col px-16 py-6 z-50 w-full"
+    style="background-color: rgba(211, 211, 216, 0.7);">
+    <div class="-ml-3">
+      <a href="#" class="-ml-1 flex flex-row items-center">
+        <img width="50"
+          src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+          alt="Logo">
+        <h2 class="text-lg font-bold -ml-3">TherapDesk</h2>
+      </a>
+    </div>
+
+    <div class="flex flex-col justify-center items-start w-96 justify-between text-lg font-semibold">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="./videoChat.html" class="hover:text-blue-500">Make Call</a>
+      <a href="#" class="hover:text-blue-500">About Us</a>
+      <a href="#" class="hover:text-blue-500">Contact Us</a>
+    </div>
+
+    <div class="btn w-32 mt-5">
+      <a href="login.html"
+        class="w-full px-7 py-3 bg-blue-700 hover:bg-white hover:text-blue-700 text-white h-12 rounded-lg font-bold text-lg">Login</button>
+      </a>
+  </nav>
+  <nav id="lgNav" class="fixed hidden lg:flex justify-between px-16 py-6 z-50 w-full"
+    style="background-color: rgba(211, 211, 216, 0.7);">
+    <div class="">
+      <a href="./index.html" class="flex flex-row items-center">
+        <img width="60"
+          src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+          alt="Logo">
+        <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+      </a>
+    </div>
+
+    <div class="flex items-center w-96 justify-between text-lg font-semibold">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="./videoChat.html" class="hover:text-blue-500">Make Call</a>
+      <a href="#" class="hover:text-blue-500">About Us</a>
+      <a href="#" class="hover:text-blue-500">Contact Us</a>
+    </div>
+
+    <div class="btn w-32">
+      <a href="login.html"
+        class="w-full px-7 py-3 bg-blue-700 hover:bg-white hover:text-blue-700 text-white h-12 rounded-lg font-bold text-lg">Login</button>
+      </a>
+  </nav>
+  <!-- </header> -->
+
+  <main class="lg:hidden">
+    <section class="">
+      <div class="absolute flex flex-row-reverse top-5 justify-between w-full px-5">
+        <div class="">
+          <a href="#" class="flex flex-row items-center">
+            <img width="60"
+              src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+              alt="Logo">
+            <h2 class="text-md font-bold -ml-3">TherapDesk</h2>
+          </a>
+        </div>
+        <button id="menu" class="z-50 flex justify-center text-center border top-3 left-3 border-white rounded">
+          <box-icon name='menu' size="md" animation="tada" class="" color="white" border="square"></box-icon>
+        </button>
+      </div>
+      <img class="w-full h-screen" src="./images/pexels-anna-nekrashevich-8993924.jpg" alt="">
+      <div class="absolute top-96 -mt-48 w-3/5 text-center p-3">
+        <h1 class="font-extrabold text-4xl ">Talk and Chat With Qualified
+          <span class="text-blue-700">Counsellors Online.</span>
+        </h1>
+        <p class="font-semibold text-md mt-5">We
+          have qualified and approved Counsellors,
+          Therapists and Mentors who would love to assist you acheive your goals.
+        </p>
+
+
+      </div>
+      <div class="absolute bottom-5 px-4 w-full flex flex-row-reverse justify-between justify-center">
+        <a href="signup.html"
+          class="flex justify-center border border-black px-4 py-4 rounded-full  hover:bg-white hover:border-white font-bold text-lg">Sign
+          Up<box-icon class="mt-1" name='right-arrow-alt' animation="fade-right"></box-icon></a>
+
+        <a href="signup.html"
+          class="bg-white border border-white bottom-7 left-3 rounded-full px-3 py-4 hover:bg-white text-black font-bold text-lg">Explore
+          Our Services</a>
+      </div>
+    </section>
+  </main>
+
+  <main class="hidden lg:block">
+    <section class=" flex justify-center" style="background-color: rgba(56, 56, 56, 0.5);">
+      <img class="w-full relative -z-10" src="./images/hero image 1.jpg" alt="Section 1 Image">
+      <div class="absolute top-56 w-3/5 text-center">
+        <h1 class="font-extrabold text-7xl text-white">Talk and Chat With Qualified
+          <span class="text-white">Counsellors Online.</span>
+        </h1>
+        <p class="font-semibold text-lg text-white mt-5">Do you have a challenge? Do you need therapy or mentorship? We
+          have qualified and approved Counsellors,
+          Therapists and Mentors who would love to assist you acheive your goals.
+        </p>
+
+        <div class="btn w-full mt-7 flex justify-center">
+          <a href="signup.html"
+            class="bg-blue-700 px-6 py-4 hover:bg-white hover:text-blue-700 text-white rounded-lg font-bold text-lg">Get
+            Started</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-full px-10 py-16 bg-slate-900">
+        <h2 class="text-5xl text-white font-bold flex justify-center">Meet Some Of Our Counsellors</h2>
+        <div class="flex justify-start gap-10 p-10 mt-10">
+          <div class="relative card bg-white rounded-lg p-5">
+            <div class="absolute left-32 -top-12 flex justify-center">
+              <img class="rounded-full" width="100" src="./Avatars/undefined (1).png" alt="Avatars">
+            </div>
+
+            <div class="name mt-12 text-center">
+              <p class="text-lg font-bold">Dr. Micheal Udo</p>
+            </div>
+
+            <div class="relative flex justify-center mt-3">
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <br>
+              <small class="absolute right-0 flex">
+                <p class="font-bold mr-1">5.0</p> Ratings
+              </small>
+            </div>
+            <br>
+            <div class="profile">
+              <h3 class="font-bold">Education</h3>
+              <p>
+                Master of Science in Counselling1998
+                University of NebraskaCity, State
+                Bachelor of Science in Psychology1994
+                Creighton University
+              </p>
+
+              <h3>Work Experience</h3>
+              <p class="font-bold">Counsellor: October 2014 – present</p>
+            </div>
+
+          </div>
+          <div class="relative card bg-white rounded-lg p-5">
+            <div class="absolute left-32 -top-12 flex justify-center">
+              <img class="rounded-full" width="100" src="./Avatars/undefined.png" alt="Avatars">
+            </div>
+
+            <div class="name mt-12 text-center">
+              <p class="text-lg font-bold">Chimamanda Adichie</p>
+            </div>
+
+            <div class="relative flex justify-center mt-3">
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <br>
+              <small class="absolute right-0 flex">
+                <p class="font-bold mr-1">5.0</p> Ratings
+              </small>
+            </div>
+            <br>
+            <div class="profile">
+              <h3 class="font-bold">Education</h3>
+              <p>
+                Master of Science in Counselling1998
+                University of NebraskaCity, State
+                Bachelor of Science in Psychology1994
+                Creighton University
+              </p>
+
+              <h3>Work Experience</h3>
+              <p class="font-bold">Counsellor: October 2011 – present</p>
+            </div>
+
+          </div>
+          <div class="relative card bg-white rounded-lg p-5">
+            <div class="absolute left-32 -top-12 flex justify-center">
+              <img class="rounded-full" width="100" src="./Avatars/undefined (2).png" alt="Avatars">
+            </div>
+
+            <div class="name mt-12 text-center">
+              <p class="text-lg font-bold">Hilary Soberekon</p>
+            </div>
+
+            <div class="relative flex justify-center mt-3">
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star' color="#f5b617"></box-icon>
+              <box-icon type='solid' name='star-half' color="#f5b617"></box-icon>
+              <br>
+              <small class="absolute right-0 flex">
+                <p class="font-bold mr-1">4.5</p> Ratings
+              </small>
+            </div>
+            <br>
+            <div class="profile">
+              <h3 class="font-bold">Education</h3>
+              <p>
+                Master of Science in Counselling1998
+                University of NebraskaCity, State
+                Bachelor of Science in Psychology1994
+                Creighton University
+              </p>
+
+              <h3>Work Experience</h3>
+              <p class="font-bold">Counsellor: October 2016 – present</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-full p-7 bg-white">
+        <h2 class="text-5xl font-bold flex justify-center">Our Sponsors</h2>
+        <p class="text-2xl mt-5 font-semibold flex justify-center">Yes. We've Got People On Our Side</p>
+
+        <div class="flex justify-between items-center mt-10">
+          <img width="100" height="50" src="./logos/acc-removebg-preview.png" alt="">
+          <img width="100" height="50" src="./logos/download__1_-removebg-preview.png" alt="">
+          <img width="200" height="50" src="./logos/psa-logo-removebg-preview.png" alt="">
+          <img width="100" height="50" src="./logos/schemaOrgLogo-removebg-preview.png" alt="">
+          <img width="100" height="50" src="./logos/UK-Council-for-Psychotherapy-logo.png" alt="">
+          <img width="100" height="50" src="./logos/UNICEF-Emblem.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-full p-10 bg-slate-900">
+        <h2 class="text-5xl text-white font-bold flex justify-center">Testimonies</h2>
+        <p class="text-2xl text-white my-5 font-semibold flex justify-center">Here are Wonderful Feedbacks and Reviews
+          from our Users</p>
+        <ul class="grid grid-cols-3 grid-rows-2 w-100 mt-10">
+          <li>
+            <div class="w-96 dark:text-white bg-slate-700 row-end-3 row-span-4 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/avatar1.png" alt="profile">
+                </div>
+                <div class="name ml-3 mt-2">
+                  <p class="text-base text-slate-900 font-bold dark:text-white">Ryan Florence</p>
+                  <p>Remix & React Training</p>
+                </div>
+              </div>
+              <div class="notes mt-4">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="w-96 text-white bg-slate-700 row-end-3 row-span-4 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/avatar114.png" alt="profile">
+                </div>
+                <div class="name ml-3 mt-2">
+                  <p class="text-base text-white font-bold dark:text-white">Guillermo Rauch</p>
+                  <p>Vercel</p>
+                </div>
+              </div>
+              <div class="notes mt-4">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="w-96 text-white bg-slate-700 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/avatar12.png" alt="profile">
+                </div>
+                <div class="name ml-3 my-4">
+                  <p class="text-base text-slate-900 font-bold dark:text-white">Sara Vieira</p>
+                  <p>Remix & React Training</p>
+                </div>
+              </div>
+              <div class="notes">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="w-96 text-white bg-slate-700 row-end-3 row-span-4 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/avatar13.png" alt="profile">
+                </div>
+                <div class="name ml-3 mt-2">
+                  <p class="text-base text-slate-900 font-bold dark:text-white">Debbie O'Brien</p>
+                  <p class="mt-0.5">Senior Program Manager at Microsoft</p>
+                </div>
+              </div>
+              <div class="notes mt-6">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="w-96 text-white bg-slate-700 row-end-3 row-span-4 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/undefined (3).png" alt="profile">
+                </div>
+                <div class="name ml-3 mt-2">
+                  <p class="text-base text-slate-900 font-bold dark:text-slate-300">Debbie O'Brien</p>
+                  <p class="mt-0.5">Senior Program Manager at Microsoft</p>
+                </div>
+              </div>
+              <div class="notes mt-6">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="w-96 text-white bg-slate-700 row-end-3 row-span-4 p-6 rounded-lg">
+              <div class="profile flex">
+                <div class="pic">
+                  <img class="rounded-full w-16 h-16" src="./Avatars/undefined (4).png" alt="profile">
+                </div>
+                <div class="name ml-3 mt-2">
+                  <p class="text-base text-slate-900 font-bold dark:text-slate-300">Debbie O'Brien</p>
+                  <p class="mt-0.5">Senior Program Manager at Microsoft</p>
+                </div>
+              </div>
+              <div class="notes mt-6">
+                <p>Have been working with CSS for over ten years and just makes my life easier. It is still CSS and you
+                  use flex, grid, etc. but just quicker to write and maintain.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flex h-80 py-10 px-10">
+      <div class="flex flex-col justify-between h-80 pb-5">
+        <a href="#" class="flex flex-row items-center">
+          <img width="60"
+            src="./images/png-transparent-illustration-of-person-sitting-on-chair-using-computer-computer-icons-iconfinder-find-work-icon-text-computer-logo-removebg-preview.png"
+            alt="Logo">
+          <h2 class="text-3xl font-bold -ml-3">TherapDesk</h2>
+        </a>
+
+        <p>@2022 TherapDesk • A Consultancy Firm</p>
+      </div>
+
+      <div class="flex justify-between w-full ml-16">
+        <div class="flex flex-col justify-between">
+          <h3 class="text-slate-900 font-bold text-lg">LEARN MORE</h3>
+          <a class="hover:text-blue-500 w-max" href="#">About</a>
+          <a class="hover:text-blue-500 w-max" href="#">Developers Docs</a>
+          <a class="hover:text-blue-500 w-max" href="#">Download</a>
+          <a class="hover:text-blue-500 w-max" href="#">Documentation</a>
+          <a class="hover:text-blue-500 w-max" href="#">MetaMask Institutional</a>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <h3 class="text-slate-900 font-bold text-lg">GET INVOLVED</h3>
+          <a class="hover:text-blue-500 w-max" href="#">GitHub</a>
+          <a href="#">Gitcoin</a>
+          <a class="hover:text-blue-500 w-max" href="#">Open Positions</a>
+          <a class="hover:text-blue-500 w-max" href="#">Swag Shop</a>
+          <a class="hover:text-blue-500 w-max" href="#">Press & Partnerships</a>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <h3 class="text-slate-900 font-bold text-lg">CONNECT</h3>
+          <a class="hover:text-blue-500 w-max" href="#">FAQs</a>
+          <a class="hover:text-blue-500 w-max" href="#">Support</a>
+          <a class="hover:text-blue-500 w-max" href="#">Blog</a>
+          <a class="hover:text-blue-500 w-max" href="#">Twitter</a>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <h3 class="text-slate-900 font-bold text-lg">LEGAL</h3>
+          <a class="hover:text-blue-500 w-max" href="#">Privacy Policy</a>
+          <a class="hover:text-blue-500 w-max" href="#">Terms of Use</a>
+          <a class="hover:text-blue-500 w-max" href="#">Contributor License Agreement</a>
+          <a class="hover:text-blue-500 w-max" href="#">Site Map</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="menu.js"></script>
+</body>
+
+</html>

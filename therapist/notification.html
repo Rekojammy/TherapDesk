@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/gencss.css"> -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/gencss.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link href="/public/output.css" rel="stylesheet"> -->
+    <title>Therapy Desk - Dashboard</title>
+</head>
+
+<style>
+    .notifs {
+        overflow-y: auto;
+    }
+    .notifs::-webkit-scrollbar {
+        display: none;
+    }
+    .notifs {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+</style>
+
+<body class="bg-white">
+
+    <div class="preloader w-screen h-screen flex justify-center bg-white">
+        <img class="h-full w-80" src="../images/99589-loader-for-web.gif" alt="">
+    </div>
+
+    <section class="notPreloader">
+        <main class="lg:hidden bg-slate-800 h-screen w-full">
+            <!-- Notification Menu -->
+                    <div id="notifcations" class="text-white h-full w-full rounded-xl pt-7">
+                        <div class="flex w-100 justify-between pt-5 px-7">
+                            <h2 class="font-bold text-lg">Notification</h2>
+                            <h3 class="flex ">
+                                <a href="#" class="underline font-semibold">
+                                    <p class="">Mark all as read</p>
+                                </a>
+                        </div>
+                        <h3 id="notifTab" class="flex justify-evenly text-gray-400 mt-10 border-b-2">
+                            <p id="all" class=" cursor-pointer px-3 pb-3 border-black">All <span
+                                    class="rounded bg-red-400 px-2">5</span></p>
+                            <p id="follow" class=" cursor-pointer px-3 pb-3">Following <span
+                                    class="rounded bg-red-400 px-2">3</span></p>
+                            <p id="archive" class=" cursor-pointer px-3 pb-3">Archived</p>
+                        </h3>
+                        <div class="notifs flex flex-col px-7 max-h-[420px]">
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-16 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                    <img class="rounded-lg" src="../Avatars/undefined.png" alt="P">
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Anna Cottrell</span>
+                                            <span id="action">booked you for </span>
+                                            <span id="purpose" class="font-semibold">a counselling session</span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">2h ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-12 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                    FE
+                                    <!-- <img class="rounded-lg" src="../Avatars/avatar1.png" alt="P"> -->
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Faith Eze</span>
+                                            <span id="action">Messaged you </span>
+                                            <span id="purpose" class="font-semibold">on TheraChat...</span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">14min ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-12 rounded-lg mr-4 bg-red-400 border-red-500 flex justify-center items-center text-white font-bold text-lg">
+                                    <img class="rounded-lg" src="../Avatars/undefined (3).png" alt="P">
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Hilary Soberekon and 12 Others </span>
+                                            <span id="action">Subscribed... </span>
+                                            <span id="purpose" class="font-semibold"></span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">1h ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-12 rounded-lg mr-4  border-teal-500 border flex justify-center items-center text-white font-bold text-lg">
+                                    <i class="text-yellow-400 fa-md fa-solid fa-star"></i>
+                                    <!-- <img class="rounded-lg" src="../Avatars/undefined (3).png" alt="P"> -->
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Your Rating </span>
+                                            <span id="action">has been upgraded </span>
+                                            <span id="purpose" class="font-semibold">to 4.5 stars...</span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">23mins ago</span>
+                                            <span id="name" class="text-gray-500 text-sm">.</span>
+                                            <span id="name" class="text-gray-500 text-sm">See Details</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                    <img class="rounded-lg" src="../Avatars/undefined (4).png" alt="P">
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Braide Shekinah </span>
+                                            <span id="action">Uploaded a file </span>
+                                            <span id="purpose" class="font-semibold"></span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">1d ago</span>
+                                            <span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex border-b py-5 items-center">
+                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                    <img class="rounded-lg" src="../Avatars/avatar1.png" alt="P">
+                                </div>
+                                <div class="flex flex-col -mt-1">
+                                    <div class="flex" id="message">
+                                        <p>
+                                            <span id="name" class="font-semibold">Fidelis Oji </span>
+                                            <span id="action">Uploaded a file </span>
+                                            <span id="purpose" class="font-semibold"></span>
+                                        </p>
+                                    </div>
+                                    <div class="flex" id="notifTime">
+                                        <p>
+                                            <span id="name" class="text-gray-500 text-sm">3w ago</span>
+                                            <span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Notification Menu -->
+        </main>
+
+        <footer class="lg:hidden fixed bottom-0 z-50 w-full bg-slate-800 border-t-2 py-5">
+            <div id="menu" class="absolute bottom-16 hidden bg-white p-4 w-1/2 rounded-lg h-64">
+                <ul class="h-full flex flex-col font-semibold text-lg justify-between ">
+                    <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="index.html">Home Page</a></li>
+                    <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="videoChat.html">Start Call</a></li>
+                    <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Profile</a></li>
+                    <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Settings</a></li>
+                    <li class="w-full rounded-lg p-2 hover:bg-blue-100"><a href="#">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="flex justify-between px-3 justify-center items-center">
+                <button id="menuBtn"
+                    class="z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
+                    <box-icon id="menuIcon" name='menu' size="" class="" color="white"></box-icon>
+                </button>
+                <button id="closeMenuBtn"
+                    class="hidden z-50 flex justify-center items-center text-center top-3 left-3 border-white rounded">
+                    <box-icon name='x' size="" class="" color="white"></box-icon>
+                </button>
+                <a href="./therapist_schedules.html" id="scheduleBtn"
+                    class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                    <box-icon name='calendar' size="" class="" color="white"></box-icon>
+                </a>
+                <a href="./therapist_dashboard.html" id="sessionsBtn"
+                    class=" z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                    <box-icon name='edit' size="" class="" color="white" type=""></box-icon>
+                </a>
+                <a href="#" id="subscribersBtn"
+                    class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                    <box-icon name='group' size="" class="" color="white"></box-icon>
+                </a>
+                <a href="notification.html" id="notifBtnSm"
+                    class="z-50 flex justify-center text-center top-3 left-3 border-white rounded">
+                    <box-icon name='bell' size="" class="" color="white"></box-icon>
+                </a>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="../JavaScript Files/dashboard.js"></script>
+    <script src="../JavaScript Files/therapschedule.js"></script>
+</body>
+
+</html>
