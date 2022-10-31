@@ -26,9 +26,11 @@
     .notifs {
         overflow-y: auto;
     }
+
     .notifs::-webkit-scrollbar {
         display: none;
     }
+
     .notifs {
         -ms-overflow-style: none;
         /* IE and Edge */
@@ -45,71 +47,119 @@
 
     <section class="notPreloader">
         <main class="lg:hidden bg-slate-800 h-full w-full p-5 pb-24">
-            <div class="flex justify-center">
-                <h1 class="text-white font-semibold text-3xl text-center">Schedules</h1>
+            <div class="flex justify-between">
+                <h1 class="text-white font-semibold text-4xl text-center">Schedules</h1>
+                <button id="profilePic">
+                    <img class=" rounded-full" width="50" src="../Avatars/avatar1.png" alt="Profile Pics">
+                </button>
+                <!-- <div id="profileMenu"
+                    class="hidden bg-black text-white absolute top-12 right-20 p-2 rounded-b-lg rounded-tl-lg">
+                    <h3 class="text-center">Therapist</h3>
+                    <ul class="mt-5 px-1 flex flex-col items-start h-full text-white text-sm font-semibold gap-1">
+                        <li
+                            class="hover:bg-blue-900 hover:text-white px-2 rounded-md w-full py-1 flex items-center">
+                            <a href=""><i class="fa-regular fa-user"></i> Profile</a>
+                        </li>
+                        <li
+                            class="hover:bg-blue-900 hover:text-white px-2 rounded-md w-full py-2 flex items-center">
+                            <a href=""><i class="fa-solid fa-circle-question"></i> Need Help?</a>
+                        </li>
+                        <li
+                            class="hover:bg-blue-900 hover:text-white px-2 rounded-md w-full py-1 flex items-center">
+                            <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </div> -->
             </div>
 
-            <section class="border mt-3 border-gray-600 rounded-xl bg-gray-600 pb-5 ">
-                <div class="flex flex-col justify-center items-center mt-5">
-                    <p class="text-white flex justify-between items-center w-4/5 font-bold">
-                        <span id="countDay" class="bg-slate-800 px-4 py-2 rounded-xl">2</span>
-                        :
-                        <span id="countHour" class="bg-slate-800 px-4 py-2 rounded-xl">33</span>
-                        :
-                        <span id="countMin" class="bg-slate-800 px-4 py-2 rounded-xl">15</span>
-                        :
-                        <span id="countSec" class="bg-slate-800 px-4 py-2 rounded-xl">06</span>
-                    </p>
-                    <p class="text-white flex justify-between items-center mt-3 w-4/5">
-                        <span class="">Days</span>
-                        <span class="">Hours</span>
-                        <span class="">Mins</span>
-                        <span class="">Secs</span>
-                    </p>
-                    <p class="font-semibold text-white text-lg mt-5">Remaining for next interview!</p>
-                    <p class="text-slate-400 font-medium">Marriage Counselling</p>
+            <h3 id="notifTab" class="flex justify-evenly text-gray-400 mt-10 border-b-2">
+                <p id="all" class=" cursor-pointer px-3 pb-3 border-black">Active <span
+                        class="rounded bg-red-400 px-2">5</span></p>
+                <p id="follow" class=" cursor-pointer px-3 pb-3">Pending <span
+                        class="rounded bg-red-400 px-2">3</span></p>
+                <p id="archive" class=" cursor-pointer px-3 pb-3">Finished </p>
+            </h3>
+
+            <div class="w-full mt-5">
+                <div class="relative">
+                    <label for="searchId" class="absolute left-5 top-2">
+                        <i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" id="searchId" placeholder="Search by name" class="w-full rounded-full border-0 bg-gray-400 h-10 outline-none pl-12 placeholder:text-white">
                 </div>
-            </section>
+            </div>
 
-            <section>
-                <div class="bg-red-800 rounded-xl w-full mt-10 p-5">
-                    <div class="flex justify-between">
-                        <h2 class="font-bold text-white text-lg">Interviews Records</h2>
-                        <a href="#" class="flex">
-                            <p class="text-slate-300 font-medium mr-1">Dashboard</p>
-                            <box-icon class="" name='caret-right-circle' size="" color="#cbd5e1"></box-icon>
-                        </a>
-                    </div>
-
-                    <div class="flex justify-between items-center my-5">
-                        <div class="flex mt-3 h-16 w-full justify-between relative justify-center items-center">
-                            <div
-                                class="w-16 text-sm flex flex-col py-2 px-8 justify-center border-yellow-700 bg-yellow-600 text-white rounded-full border-2 z-10 transition ease-in-out delay-150 hover:text-lg hover:-translate-y-1 hover:scale-110 hover:bg-yellow-800 duration-300 items-center hover:border-2">
-                                <box-icon name='envelope' color="#ffffff"></box-icon>
-                                Emails
-                            </div>
-                            <div
-                                class="w-16 text-sm flex flex-col py-2 px-8 justify-center border-red-700 bg-red-600 text-white rounded-full border-2 z-10 transition ease-in-out delay-150 hover:text-lg hover:-translate-y-1 hover:scale-110 hover:bg-red-900 duration-300 items-center hover:border-2">
-                                <box-icon name='message-rounded-dots' color="#ffffff"></box-icon>
-                                Chats
-                            </div>
-                            <div
-                                class="w-16 text-sm flex flex-col py-2 px-8 justify-center border-sky-700 bg-sky-600 text-white rounded-full border-2 z-10 transition ease-in-out delay-150 hover:text-lg hover:-translate-y-1 hover:scale-110 hover:bg-blue-800 duration-300 items-center hover:border-2">
-                                <box-icon name='photo-album' color="#ffffff"></box-icon>
-                                Media
+                <div class="row flex justify-between w-full mt-5 gap-5">
+                    <!-- Card Two -->
+                    <div class="cardTemplate pl-5 pt-5 shadow-2xl h-44 w-full rounded-xl bg-slate-700">
+                        <div class="card-body">
+                            <div class="flex flex-col justify-content-between justify-center p-0">
+                                <h5 class="card-title font-bold text-3xl text-white" id="total_guests" name="length">
+                                    56%
+                                </h5>
+                                <p class="card-text font-semibold text-lg text-white">Success   </p>
+                                <div class="flex h-full relative justify-center items-end">
+                                    <!-- Card body -->
+                                    <img width="120" src="../images/red-growth-graph-transparent-png-835640-removebg-preview.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center text-sm text-slate-300 font-medium mt-5">110 Emails Archived!</p>
+
+                    <!-- Card Three -->
+                    <div class="cardTemplate pl-5 pt-5 shadow-2xl h-44 w-full rounded-xl" style="background: #f5fffc;">
+                        <div class="card-body">
+                            <div class="flex flex-col justify-content-between justify-center p-0">
+                                <h5 class="card-title font-bold text-3xl" id="total_guests" name="length">24</h5>
+                                <p class="card-text font-semibold text-xl">Clients</p>
+                                <div class="flex mt-20 h-full relative justify-center items-end">
+                                    <img class="rounded-full absolute left-0 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                        width="40" src="../Avatars/avatar1.png" alt="Image">
+                                    <img class="rounded-full absolute left-6 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                        width="40" src="../Avatars/avatar114.png" alt="Image">
+                                    <img class="rounded-full absolute left-12 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                        width="40" src="../Avatars/avatar12.png" alt="Image">
+                                    <img class="rounded-full absolute left-20 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                        width="40" src="../Avatars/avatar13.png" alt="Image">
+                                    <img class="rounded-full absolute left-18 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                        width="40" src="../Avatars/undefined (3).png" alt="Image">
+                                    <div
+                                        class="div text-white absolute right-5 bottom-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                                        <a href="" class=""><i class="fa-solid fa-lg fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <section>
+                <div class="rounded-xl w-full mt-10 p-5 border">
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-white text-lg">Family Therapy</h2>
+                        <div class="flex">
+                            <p class="text-slate-300 font-medium mr-1">Tomorrow</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center my-5">
+                        <div class="mt-3 h-16 w-full justify-between relative justify-center items-center text-white">
+                            <h2>Johnson Family</h2>
+                            <p class="">4:30pm to 6:00pm . 1h 30mins</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex h-full w-1/2 relative justify-center items-end pt-12">
+                            <img class="rounded-full absolute left-0 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                width="50" src="../Avatars/avatar1.png" alt="Image">
+                            <img class="rounded-full absolute left-6 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                width="50" src="../Avatars/avatar114.png" alt="Image">
+                            <img class="rounded-full absolute left-12 border-2 z-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 duration-300 items-center hover:border-2"
+                                width="50" src="../Avatars/avatar12.png" alt="Image">
+                        </div>
+                        <p class="rounded-3xl font-bold text-slate-800 bg-red-300 p-3">Group Therapy</p>
+                    </div>
                 </div>
             </section>
-
-            <section class="mt-5">
-                <div class="w-full gap-5 bg-orange-700 text-center rounded-lg py-3">
-                    <p class="text-white font-semibold">5 Interview Records Found Today!</p>
-                </div>
-            </section>
-
         </main>
 
         <footer class="lg:hidden fixed bottom-0 z-50 w-full bg-slate-800 border-t-2 py-5">
@@ -192,7 +242,8 @@
                         </h3>
                         <div class="notifs flex flex-col py- px-7 max-h-[420px]">
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
                                     <img class="rounded-lg" src="../Avatars/undefined.png" alt="P">
                                 </div>
                                 <div class="flex flex-col -mt-1">
@@ -211,7 +262,8 @@
                                 </div>
                             </div>
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
                                     FE
                                     <!-- <img class="rounded-lg" src="../Avatars/avatar1.png" alt="P"> -->
                                 </div>
@@ -231,7 +283,8 @@
                                 </div>
                             </div>
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-500 flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-500 flex justify-center items-center text-white font-bold text-lg">
                                     <img class="rounded-lg" src="../Avatars/undefined (3).png" alt="P">
                                 </div>
                                 <div class="flex flex-col -mt-1">
@@ -250,7 +303,8 @@
                                 </div>
                             </div>
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4  border-teal-500 border flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4  border-teal-500 border flex justify-center items-center text-white font-bold text-lg">
                                     <i class="text-yellow-400 fa-md fa-solid fa-star"></i>
                                     <!-- <img class="rounded-lg" src="../Avatars/undefined (3).png" alt="P"> -->
                                 </div>
@@ -272,7 +326,8 @@
                                 </div>
                             </div>
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
                                     <img class="rounded-lg" src="../Avatars/undefined (4).png" alt="P">
                                 </div>
                                 <div class="flex flex-col -mt-1">
@@ -292,7 +347,8 @@
                                 </div>
                             </div>
                             <div class="flex border-b py-5 items-center">
-                                <div class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
+                                <div
+                                    class="h-10 w-10 rounded-lg mr-4 bg-red-400 border-red-400 flex justify-center items-center text-white font-bold text-lg">
                                     <img class="rounded-lg" src="../Avatars/avatar1.png" alt="P">
                                 </div>
                                 <div class="flex flex-col -mt-1">
@@ -378,7 +434,8 @@
                                     <span class="">Mins</span>
                                     <span class="">Secs</span>
                                 </p>
-                                <p class="font-semibold text-white text-lg mt-5 text-center">Remaining for next interview!</p>
+                                <p class="font-semibold text-white text-lg mt-5 text-center">Remaining for next
+                                    interview!</p>
                                 <p class="text-slate-400 font-medium">Marriage Counselling</p>
                             </div>
                         </div>
