@@ -33,11 +33,10 @@ form.addEventListener('submit', (e) => {
             Gnerr.innerHTML = 'Login Successful!';
             Swal.fire(
                 'Login Successful!',
-                'Go ahead to login',
                 'success'
               )
             form.submit();
-            location.href = "therapist_dashboard.html";
+            location.href = "./therapist/therapist_dashboard.html";
         }
     
 })
